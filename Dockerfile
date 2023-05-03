@@ -94,6 +94,7 @@ LABEL org.opencontainers.image.vendor="Xorde Technologies"
 LABEL org.opencontainers.image.source="https://github.com/xorde-labs/docker-litecoin-node"
 
 ENV BLOCKCHAIN_NAME=litecoin
+ARG DOCKER_GIT_SHA
 
 ### Add user and set home directory
 RUN useradd -m -s /sbin/nologin -d /home/${BLOCKCHAIN_NAME} ${BLOCKCHAIN_NAME}
