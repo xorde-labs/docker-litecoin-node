@@ -4,7 +4,6 @@ services:
   litecoin-node:
     build:
       context: .
-      network: host
     image: ghcr.io/xorde-labs/docker-litecoin-node:latest
     restart: unless-stopped
     stop_grace_period: 1m
