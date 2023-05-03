@@ -1,0 +1,15 @@
+{
+  "name": "litecoin-node",
+  "version": "1.0.0",
+  "description": "litecoin Node Docker Image",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docker:build": "docker build . -t litecoin-node",
+    "docker:run": "docker run litecoin-node"
+  },
+  "author": "",
+  "license": "ISC"
+}
