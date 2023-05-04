@@ -2,7 +2,7 @@
 
 Main goal of this project is to dockerize blockchain nodes so we could run them in pure DevOps fashion: dockerized, cluster-ready, manageable.
 
-[![Docker Build](https://github.com/xorde-nodes/litecoin-node/actions/workflows/docker-image.yml/badge.svg)](https://github.com/xorde-nodes/litecoin-node/actions/workflows/docker-image.yml)
+[![Docker Build](https://github.com/xorde-labs/docker-litecoin-node/actions/workflows/docker-image.yml/badge.svg)](https://github.com/xorde-labs/docker-litecoin-node/actions/workflows/docker-image.yml)
 
 This is a dockerized **built from sources** litecoin node.
 
@@ -14,26 +14,26 @@ This is a dockerized **built from sources** litecoin node.
 #### Standalone Docker
 
 ```shell
-docker run -d -p 8332:8332 -p 8333:8333 --restart unless-stopped ghcr.io/xorde/litecoin-node:latest
+docker run -d -p 8332:8332 -p 8333:8333 --restart unless-stopped ghcr.io/xorde-labs/docker-litecoin-node:latest
 ```
 
 Store all settings and blockchain outside docker container:
 
 ```shell
-docker run -d --name litecoin-node -v /data/litecoin:/home/litecoin/.litecoin -p 8332:8332 -p 8333:8333 --restart always -e "ENABLE_WALLET=1" -e "RPC_SERVER=1" ghcr.io/xorde/litecoin-node:latest
+docker run -d --name litecoin-node -v /data/litecoin:/home/litecoin/.litecoin -p 8332:8332 -p 8333:8333 --restart always -e "ENABLE_WALLET=1" -e "RPC_SERVER=1" ghcr.io/xorde-labs/docker-litecoin-node:latest
 ```
 
 Store all settings and blockchain outside docker container and run node on testnet:
 
 ```shell
-docker run -d --name litecoin-node -v /data1/litecoin:/home/litecoin/.litecoin -p 8332:8332 -p 8333:8333 --restart always -e "TESTNET=1" -e "RPC_SERVER=1" ghcr.io/xorde/litecoin-node:latest
+docker run -d --name litecoin-node -v /data1/litecoin:/home/litecoin/.litecoin -p 8332:8332 -p 8333:8333 --restart always -e "TESTNET=1" -e "RPC_SERVER=1" ghcr.io/xorde-labs/docker-litecoin-node:latest
 ```
 
 #### Docker Compose
 
 ```shell
-git clone https://github.com/xorde-nodes/litecoin-node.git
-cd litecoin-node
+git clone ghcr.io/xorde-labs/docker-litecoin-node:latest
+cd docker-litecoin-node
 cp example.env .env
 # now please edit .env file to your choice, save it, and continue:
 # you can skip editing .env file, and leave it unchanged 
