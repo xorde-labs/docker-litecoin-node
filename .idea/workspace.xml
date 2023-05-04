@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="docs: updated README.md">
+    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="fix: fixed port numbers">
+      <change afterPath="$PROJECT_DIR$/TROUBLESHOOTING.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,7 @@
       <workItem from="1683026785963" duration="16507000" />
       <workItem from="1683113252990" duration="5861000" />
       <workItem from="1683121929360" duration="6979000" />
-      <workItem from="1683192508545" duration="539000" />
+      <workItem from="1683192508545" duration="1888000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (error when build)">
       <created>1683112877616</created>
@@ -177,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683192697591</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: fixed port numbers">
+      <created>1683193084363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683193084363</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +208,7 @@
     <MESSAGE value="Removed image signature" />
     <MESSAGE value="Updated docs" />
     <MESSAGE value="docs: updated README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: updated README.md" />
+    <MESSAGE value="fix: fixed port numbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixed port numbers" />
   </component>
 </project>
