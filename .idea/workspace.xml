@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="Removed image signature">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/docker-litecoin-node.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="docs: updated README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +133,7 @@
       <workItem from="1683026785963" duration="16507000" />
       <workItem from="1683113252990" duration="5861000" />
       <workItem from="1683121929360" duration="6979000" />
-      <workItem from="1683192508545" duration="153000" />
+      <workItem from="1683192508545" duration="539000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (error when build)">
       <created>1683112877616</created>
@@ -175,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683134514462</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="docs: updated README.md">
+      <created>1683192697591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683192697591</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +200,8 @@
     <MESSAGE value="Image builds on x86_64" />
     <MESSAGE value="Cleanup and CI workflow" />
     <MESSAGE value="Removed image signature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed image signature" />
+    <MESSAGE value="Updated docs" />
+    <MESSAGE value="docs: updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: updated README.md" />
   </component>
 </project>

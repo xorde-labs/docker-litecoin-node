@@ -25,8 +25,8 @@ services:
       - SOCKS5_PROXY
       - TXINDEX_ENABLE
     ports:
-      - ${RPC_PORT}:8332/tcp
-      - ${PORT}:8333/tcp
+      - ${RPC_PORT}:9332/tcp
+      - ${PORT}:9333/tcp
 
 volumes:
   litecoin_data:
