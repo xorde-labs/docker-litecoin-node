@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     stop_grace_period: 1m
     command: ${CMD_OPTS}
+    healthcheck:
+      test: [ "CMD-SHELL", "healthcheck.sh" ]
     volumes:
       - litecoin_data:/home/litecoin/.litecoin
     environment:
