@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="docs: added TROUBLESHOOTING.md">
+    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="docs: edited TROUBLESHOOTING.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TROUBLESHOOTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/TROUBLESHOOTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.env" beforeDir="false" afterPath="$PROJECT_DIR$/example.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/config.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/config.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/setup.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +73,7 @@
       <recent name="$PROJECT_DIR$/builder" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile (remote)">
+  <component name="RunManager" selected="Docker.docker-compose.yml: (local, build)">
     <configuration name="Dockerfile (local)" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker (local)">
       <deployment type="dockerfile">
         <settings>
@@ -90,29 +92,44 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="test.Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="docker01.dehz41.jet.lan">
-      <deployment type="dockerfile">
+    <configuration name="docker-compose.yml: (local, build)" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker (local)">
+      <deployment type="docker-compose.yml">
         <settings>
-          <option name="buildOnly" value="true" />
-          <option name="sourceFilePath" value="test.Dockerfile" />
+          <option name="envFilePath" value="" />
+          <option name="commandLineOptions" value="--build" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: (local)" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker (local)">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.test.Dockerfile" />
+      <item itemvalue="Docker.docker-compose.yml: (local)" />
+      <item itemvalue="Docker.docker-compose.yml: (local, build)" />
       <item itemvalue="Docker.Dockerfile (local)" />
       <item itemvalue="Docker.Dockerfile (remote)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.test.Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml: (local)" />
         <item itemvalue="Docker.Dockerfile (remote)" />
         <item itemvalue="Docker.Dockerfile (local)" />
       </list>
@@ -132,7 +149,7 @@
       <workItem from="1683026785963" duration="16507000" />
       <workItem from="1683113252990" duration="5861000" />
       <workItem from="1683121929360" duration="6979000" />
-      <workItem from="1683192508545" duration="3010000" />
+      <workItem from="1683192508545" duration="5608000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (error when build)">
       <created>1683112877616</created>
@@ -190,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683194419393</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="docs: edited TROUBLESHOOTING.md">
+      <created>1683199832383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683199832383</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +241,7 @@
     <MESSAGE value="docs: updated README.md" />
     <MESSAGE value="fix: fixed port numbers" />
     <MESSAGE value="docs: added TROUBLESHOOTING.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs: added TROUBLESHOOTING.md" />
+    <MESSAGE value="docs: edited TROUBLESHOOTING.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: edited TROUBLESHOOTING.md" />
   </component>
 </project>
