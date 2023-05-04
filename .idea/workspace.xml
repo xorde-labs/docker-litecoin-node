@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="fix: fixed port numbers">
-      <change afterPath="$PROJECT_DIR$/TROUBLESHOOTING.md" afterDir="false" />
+    <list default="true" id="49d62afd-046f-4fcf-982b-2994a6f5f029" name="Changes" comment="docs: added TROUBLESHOOTING.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TROUBLESHOOTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/TROUBLESHOOTING.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <workItem from="1683026785963" duration="16507000" />
       <workItem from="1683113252990" duration="5861000" />
       <workItem from="1683121929360" duration="6979000" />
-      <workItem from="1683192508545" duration="1888000" />
+      <workItem from="1683192508545" duration="3010000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (error when build)">
       <created>1683112877616</created>
@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683193084363</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="docs: added TROUBLESHOOTING.md">
+      <created>1683194419393</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683194419393</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +216,7 @@
     <MESSAGE value="Updated docs" />
     <MESSAGE value="docs: updated README.md" />
     <MESSAGE value="fix: fixed port numbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fixed port numbers" />
+    <MESSAGE value="docs: added TROUBLESHOOTING.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: added TROUBLESHOOTING.md" />
   </component>
 </project>
