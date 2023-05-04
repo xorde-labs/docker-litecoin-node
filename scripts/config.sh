@@ -6,8 +6,12 @@ set -e
 alias echo="echo CONFIG:"
 
 if [ -f "${CONFIG_FILE}" ]; then
-  echo "[${CONFIG_FILE}] already exists. Exiting..."
-  exit 0
+  if printf "${CONFIG_REGENERATE}" | grep -q "[YyTt1]"; then
+    echo "Regenerating config file ${CONFIG_FILE}"
+  else
+    echo "[${CONFIG_FILE}] already exists. Exiting..."
+    exit 0
+  fi
 else
   echo "[${CONFIG_FILE}] doesn't exist. Initializing..."
   printf "# Generated config: START -------------\n\n" > "${CONFIG_FILE}"
@@ -86,7 +90,7 @@ if printf "${RPC_ENABLE}" | grep -q "[YyTt1]"; then
   RPC_PASSWORD=${RPC_PASSWORD:-$(tr -cd '[:alnum:]' < /dev/urandom | fold -w30 | head -n1)}
 	printf "rpcpassword=${RPC_PASSWORD}\n" >> "${CONFIG_FILE}"
 
-	printf "\n[${NETWORK_SECTION:-main}]\nrpcport=8332\nrpcbind=${RPC_BIND:-0.0.0.0}" >> "${CONFIG_FILE}"
+	printf "\n[${NETWORK_SECTION:-main}]\nrpcport=${RPC_PORT:-9332}\nrpcbind=${RPC_BIND:-0.0.0.0}" >> "${CONFIG_FILE}"
 fi
 
 echo "Config initialization completed successfully (${CONFIG_FILE})"

@@ -24,8 +24,9 @@ services:
       - CONFIG_FILE
       - SOCKS5_PROXY
       - TXINDEX_ENABLE
+      - CONFIG_REGENERATE
     ports:
-      - ${RPC_PORT}:9332/tcp
+      - ${RPC_PORT}:${RPC_PORT}/tcp
       - ${PORT}:9333/tcp
 
 volumes:
