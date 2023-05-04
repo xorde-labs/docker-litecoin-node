@@ -5,7 +5,7 @@
 Try connecting directly to the container and running the following command:
 
 ```bash
-curl --user litecoinrpc:xxxxxxxxxxxxxxx --data-binary '{"jsonrpc":"1.0","id":"curltext","method":"getinfo","params":[]}' -H 'content-type:text/plain;' http://127.0.0.1:9332
+curl --user litecoinrpc:xxxxxxxxxxxxxxx --data-binary '{"jsonrpc":"1.0","id":"curltext","method":"getblockchaininfo","params":[]}' -H 'content-type:text/plain;' http://127.0.0.1:9332
 ```
 
 ## 2. Daemon requires a reindex
