@@ -22,6 +22,11 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        arch: [amd64, arm64]
+
     steps:
       - name: Determine latest release version
         run: |
