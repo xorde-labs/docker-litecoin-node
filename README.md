@@ -1,11 +1,10 @@
-# litecoin Docker Node
-
-Main goal of this project is to dockerize blockchain nodes so we could run them in pure DevOps fashion: dockerized, cluster-ready, manageable.
+# Litecoin Docker Node
 
 [![Docker Build](https://github.com/xorde-labs/docker-litecoin-node/actions/workflows/docker-image.yml/badge.svg)](https://github.com/xorde-labs/docker-litecoin-node/actions/workflows/docker-image.yml)
 
-This is a dockerized **built from sources** litecoin node.
+Litecoin node docker image used for [Xorde](https://xorde.io) infrastructure.
 
+This is a dockerized **built from sources** litecoin node.
 
 ## Installing
 
