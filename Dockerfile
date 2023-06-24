@@ -2,26 +2,30 @@ FROM debian:stable-slim as berkeleydb
 
 ENV BERKELEYDB_VERSION=db-4.8.30.NC
 ENV BERKELEYDB_PREFIX=/opt/${BERKELEYDB_VERSION}
+ENV DEBIAN_FRONTEND=noninteractive
+ENV NPROC="nproc --ignore=4"
 
 RUN apt-get update -y \
     && apt-get install -y curl gcc g++ make autoconf automake libtool
 
-RUN curl https://download.oracle.com/berkeley-db/${BERKELEYDB_VERSION}.tar.gz --output ${BERKELEYDB_VERSION}.tar.gz
-RUN tar -xzf *.tar.gz
-RUN sed s/__atomic_compare_exchange/__atomic_compare_exchange_db/g -i ${BERKELEYDB_VERSION}/dbinc/atomic.h
-RUN mkdir -p ${BERKELEYDB_PREFIX}
+RUN curl https://download.oracle.com/berkeley-db/${BERKELEYDB_VERSION}.tar.gz --output ${BERKELEYDB_VERSION}.tar.gz \
+    && tar -xzf *.tar.gz \
+    && sed s/__atomic_compare_exchange/__atomic_compare_exchange_db/g -i ${BERKELEYDB_VERSION}/dbinc/atomic.h \
+    && mkdir -p ${BERKELEYDB_PREFIX}
 
 WORKDIR /${BERKELEYDB_VERSION}/build_unix
 
-RUN ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=${BERKELEYDB_PREFIX} --build=arm-linux
-RUN make -j$(nproc --ignore=4)
-RUN make install
-RUN rm -rf ${BERKELEYDB_PREFIX}/docs
+RUN ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=${BERKELEYDB_PREFIX} --build=arm-linux \
+    && make -j$($NPROC) \
+    && make install \
+    && rm -rf ${BERKELEYDB_PREFIX}/docs
 
 FROM debian:stable-slim as builder
 
 ENV BLOCKCHAIN_NAME=litecoin
 ENV BUILD_PREFIX=/opt/$BLOCKCHAIN_NAME
+ENV DEBIAN_FRONTEND=noninteractive
+ENV NPROC="nproc --ignore=4"
 
 ARG SOURCE_VERSION
 ARG SOURCE_REPO=https://github.com/litecoin-project/litecoin
@@ -71,7 +75,7 @@ RUN cd ${BLOCKCHAIN_NAME} \
 
 ### Make build
 RUN cd ${BLOCKCHAIN_NAME} \
-    && make -j$(nproc --ignore=4) \
+    && make -j$($NPROC) \
     && make install
 
 RUN find /opt
@@ -81,6 +85,9 @@ RUN strip ${BUILD_PREFIX}/bin/litecoin-cli \
     && strip ${BUILD_PREFIX}/bin/litecoind \
     && strip ${BUILD_PREFIX}/lib/libbitcoinconsensus.a \
     && strip ${BUILD_PREFIX}/lib/libbitcoinconsensus.so.0.0.0
+
+### Save nproc to build_envs
+RUN echo "BUILD_NPROC=$($NPROC)" | tee -a build_info/build_envs.txt
 
 ### Output any missing library deps:
 RUN { for i in $(find /opt -type f -executable -print); \
@@ -94,6 +101,8 @@ LABEL org.opencontainers.image.vendor="Xorde Technologies"
 LABEL org.opencontainers.image.source="https://github.com/xorde-labs/docker-litecoin-node"
 
 ENV BLOCKCHAIN_NAME=litecoin
+ENV DEBIAN_FRONTEND=noninteractive
+
 ARG DOCKER_GIT_SHA
 
 ### Add user and set home directory
@@ -102,7 +111,7 @@ WORKDIR /home/${BLOCKCHAIN_NAME}
 
 ### Add packages
 RUN apt-get update -y \
-    && apt-get install -y curl libfmt7 libzmq5 libboost-filesystem1.74.0 libboost-thread1.74.0 libevent-2.1-7 libevent-pthreads-2.1-7
+    && apt-get install -y curl libfmt9 libzmq5 libboost-filesystem1.74.0 libboost-thread1.74.0 libevent-2.1-7 libevent-pthreads-2.1-7
 
 ### Copy script files (entrypoint, config, etc)
 COPY ./scripts .
@@ -127,3 +136,5 @@ USER ${BLOCKCHAIN_NAME}
 ENTRYPOINT ["./entrypoint.sh"]
 
 EXPOSE 9332 9333 19332 19333 19444
+
+RUN cat build_envs.txt | sort -u
