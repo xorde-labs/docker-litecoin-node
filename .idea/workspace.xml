@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="debian" />
+    <option name="BRANCH" value="feat/healthcheck" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -48,7 +48,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/healthcheck&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/almo/Repos/xorde-labs/docker-litecoin-node&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -74,19 +74,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Docker.Dockerfile (remote)">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="docker-litecoin-node" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="docker-litecoin-node" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Dockerfile (local)" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker (local)">
       <deployment type="dockerfile">
         <settings>
@@ -172,6 +159,8 @@
       <workItem from="1687582689289" duration="740000" />
       <workItem from="1687583433944" duration="190000" />
       <workItem from="1687583639504" duration="9000" />
+      <workItem from="1687862115777" duration="1390000" />
+      <workItem from="1688465381540" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit (error when build)">
       <created>1683112877616</created>
